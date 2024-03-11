@@ -1,0 +1,105 @@
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <script>
+        (function () {
+            function redirectToIndexIfKeyNotEntered() {
+                if (!localStorage.getItem("hiwid_key_used")) {
+                    // Navigate to index.html located outside of the enter folder
+                    window.location.href = 'index.html';
+                }
+            }
+
+            redirectToIndexIfKeyNotEntered();
+        })();
+    </script>
+</body>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organized Buttons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 20px; /* Add padding to push buttons below the top */
+            transition: background-color 0.5s ease; /* Add transition for background color change */
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #cc0000; /* Darker shade on hover */
+     /* Define background color classes */}
+        .ocean-bg {
+            background-color: #0099cc; /* Ocean blue */
+        }
+
+        .lava-bg {
+            background-color: #ff6600; /* Lava orange */
+        }
+
+        .space-bg {
+            background-color: #333333; /* Space black */
+        }
+    </style>
+</head>
+
+<body class="ocean-bg"> <!-- Set default background color class -->
+    <div class="button-container" id="buttonContainer">
+        <button onclick="changeBackground('ocean')">Ocean</button>
+        <button onclick="changeBackground('lava')">Lava</button>
+        <button onclick="changeBackground('space')">Space</button>
+    </div>
+
+    <div class="button-container">
+        <button onclick="goTo('Link/ruffle/index.html')">ruffle [Beta] </button>
+        <button onclick="goTo('Link/1v1/index.html')"> 1v1.lol [ could ]</button>
+        <button onclick="goTo('Link/f1/index.html')"> Fnaf 1 [ propably ] </button>
+        <button onclick="goTo('Link/fs2/index.html')"> Funny pew </button>
+        <button onclick="goTo('Link/emulatorjs/index.html')"> emulator [beta] </button>
+        <button onclick="goTo('Link/gdlite/index.html')"> geoetry dash [lite, NOT WORK] </button>
+        <button onclick="goTo('Link/smart-calculator-main')"> caculator phone [ really useful try : D] </button>
+    </div> 
+
+    <script>
+        // Function to change the background color
+        function changeBackground(background) {
+            document.body.className = background + "-bg";
+        }
+
+        // Function to navigate to other HTML pages
+        function goTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+
+</html>

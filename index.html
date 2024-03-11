@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<h1 style="color: rgb(101, 0, 233);">WELCOME!</h1>
+  <h1 style="color: rgb(0, 4, 255);">TO THE FLUID! WERE IN BETA FOR NOW VERSION V7 WERE INDEED SKIDDED  XD</h1>
+
+
+
+  <body>
+    <div id="content">
+      <h1>Welcome to the Secure System</h1>
+    </div>
+    <script>
+      (function () {
+        function c() {
+          if (localStorage.getItem("hiwid_key_used")) {
+            d("content").style.display = "block";
+            d("content").classList.add("access-granted");
+            d("content").innerHTML = '<h1 class="access-granted">Access Granted!</h1>';
+            return;
+          }
+
+          console.log("Enter the secret key:");
+
+          var a = window.prompt("Enter the secret key:");
+
+          if (a === null || a === "" || !Array.from({ length: 20 }, (_, i) => `NOSKID${i + 1}`).includes(a)) {
+            // Invalid key or cancelled
+            d("content").classList.add("access-denied");
+            d("content").innerHTML = '<h1 class="access-denied">Access Denied!</h1>';
+            // Set both page and link to about:blank
+            window.location.href = 'about:blank';
+          } else {
+            // Correct key
+            localStorage.setItem("hiwid_key_used", "true");
+            d("content").style.display = "block";
+            d("content").classList.add("access-granted");
+            d("content").innerHTML = '<h1 class="access-granted">Access Granted!</h1>';
+          }
+        }
+
+        function d(a) {
+          return document.getElementById(a);
+        }
+
+        c();
+      })();
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+  <head>
+  </head>
+
+
+
+
+
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organized Buttons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 20px; /* Add padding to push buttons below the top */
+            transition: background-color 0.5s ease; /* Add transition for background color change */
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #cc0000; /* Darker shade on hover */
+        }
+
+        /* Define background color classes */
+        .ocean-bg {
+            background-color: #0099cc; /* Ocean blue */
+        }
+
+        .lava-bg {
+            background-color: #ff6600; /* Lava orange */
+        }
+
+        .space-bg {
+            background-color: #333333; /* Space black */
+        }
+    </style>
+</head>
+
+<body class="ocean-bg"> <!-- Set default background color class -->
+    <div class="button-container" id="buttonContainer">
+        <button onclick="changeBackground('ocean')">Ocean</button>
+        <button onclick="changeBackground('lava')">Lava</button>
+        <button onclick="changeBackground('space')">Space</button>
+    </div>
+
+    <div class="button-container">
+        <button onclick="goTo('gam/DataSaver.html')">Data Saver</button>
+        <button onclick="goTo('gam/NOSKID.html')">Message For Kevin and groups</button>
+        <button onclick="goTo('TheLinks.html')">G**es</button>
+        <button onclick="goTo('Musicofyeah.html')">Music</button>
+        <button onclick="goTo('gam/enter/emergancy.html')">Extras Emergency Links</button>
+        <button onclick="goTo('gam/enter/SupportGmail.html')">Updates</button>
+        <button onclick="goTo('gam/tutorial.html')">tutorial for self host</button>
+        <button onclick="goTo('gam/enter/Scooby.html')">Url's</button>
+    </div>
+
+    <script>
+        // Function to change the background color
+        function changeBackground(background) {
+            document.body.className = background + "-bg";
+        }
+
+        // Function to navigate to other HTML pages
+        function goTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+
+</html>
