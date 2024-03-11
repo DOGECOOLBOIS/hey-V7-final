@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <script>
+      (function () {
+          function redirectToIndexIfKeyNotEntered() {
+              if (!localStorage.getItem("hiwid_key_used")) {
+                  // Navigate to index.html located outside of the enter folder
+                  window.location.href = '../index.html';
+              }
+          }
+
+          redirectToIndexIfKeyNotEntered();
+      })();
+  </script>
+</body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Example</title>
+  <style>
+    body {
+      background-color: #000000; /* Specify your desired color here */
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a sample HTML document with a background color</h1>
+  <p>You can set the background color to any color you like using CSS.</p>
+</body>
+</html>
+
+
+
+
+
+   <title> About:Blank</title>
+  <h1 style="color: cyan;">here is where you save your data</h1>
+    <h1 style="color: blue;">Used for r0bl0x password
+      and etc
+      dont worry I
+      wont look it is
+        data base</h1>
+
+
+       <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+         <textarea id="textArea" rows="5" cols="40" placeholder="Type your text here"></textarea><br>
+
+         <button onclick="saveText()">Save</button>
+
+         <div id="savedText"></div>
+
+         <script>
+           function saveText() {
+             // Get the text from the textarea
+             var textToSave = document.getElementById('textArea').value;
+
+             // Save the text to local storage
+             localStorage.setItem('savedText', textToSave);
+
+             // Display a confirmation message
+             document.getElementById('savedText').innerText = 'Text saved successfully!';
+           }
+
+           // Load saved text on page load
+           window.onload = function() {
+             var savedText = localStorage.getItem('savedText');
+
+             if (savedText) {
+               document.getElementById('textArea').value = savedText;
+               document.getElementById('savedText').innerText = 'Text loaded from previous session.';
+             }
+           };
+         </script>
+
+       </body>
+
+
+
+
+
+
+
+
+</html>
