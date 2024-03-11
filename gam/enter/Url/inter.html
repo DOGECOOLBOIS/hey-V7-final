@@ -1,0 +1,55 @@
+<html>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <script>
+      (function () {
+          function redirectToIndexIfKeyNotEntered() {
+              if (!localStorage.getItem("hiwid_key_used")) {
+                  // Navigate to index.html located outside of the enter folder
+                  window.location.href = '../../../index.html';
+              }
+          }
+
+          redirectToIndexIfKeyNotEntered();
+      })();
+  </script>
+</body>
+
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+          }
+      
+          .my-iframe {
+            border: 0;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            margin: 0 auto;
+          }
+        </style>
+      </head>
+      <body>
+        <iframe class="my-iframe" src="https://interstellar-git-main-dogecoolbois-projects.vercel.app/"></iframe>
+      </body>
+      </html>
+      
+
+
+
+</html>
